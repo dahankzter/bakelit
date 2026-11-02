@@ -1,0 +1,9 @@
+{
+  name: 'json5',
+  mask: 0xFF,
+  ratio: .5,
+  big: +1e3,
+  limit: Infinity,
+  note: "line \
+continued",
+}

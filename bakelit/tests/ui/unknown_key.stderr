@@ -1,0 +1,5 @@
+error: ui-data/server.json:1:24: $.prot: unknown key; did you mean "port"?
+ --> tests/ui/unknown_key.rs:2:26
+  |
+2 |     static APP: Server = "ui-data/server.json";
+  |                          ^^^^^^^^^^^^^^^^^^^^^

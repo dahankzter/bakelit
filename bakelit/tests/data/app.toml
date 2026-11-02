@@ -1,0 +1,14 @@
+name = "toml"
+port = 8080
+released = 2026-11-02
+ratio = 0.5
+
+[limits]
+cpu = 2
+
+[[servers]]
+host = "a.example"
+max-conns = 10
+
+[[servers]]
+host = "b.example"

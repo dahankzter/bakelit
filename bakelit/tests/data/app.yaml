@@ -1,0 +1,15 @@
+name: yaml
+port: 8080
+enabled: true
+ratio: .5
+tags: [a, b]
+servers:
+  - host: a.example
+    max-conns: 10
+  - &backup
+    host: b.example
+fallback: *backup
+note: |
+  two
+  lines
+level: info

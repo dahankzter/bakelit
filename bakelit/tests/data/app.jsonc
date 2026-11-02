@@ -1,0 +1,5 @@
+// Comments and trailing commas.
+{
+  "name": "jsonc", /* inline */
+  "ports": [80, 443,],
+}

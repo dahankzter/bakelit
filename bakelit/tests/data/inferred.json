@@ -1,0 +1,9 @@
+{
+  "title": "inferred",
+  "version": 3,
+  "servers": [
+    { "host": "a.example", "port": 80, "weight": 0.5, "note": null },
+    { "host": "b.example", "port": 8080, "note": "backup" }
+  ],
+  "owner": { "name": "ops", "tags": ["x", "y"] }
+}

@@ -1,0 +1,48 @@
+[package]
+name = "bakelit-macros"
+description = "Procedural macros for bakelit. Use the bakelit crate instead."
+documentation = "https://docs.rs/bakelit"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+proc-macro = true
+
+[features]
+default = ["json", "toml", "yaml", "csv"]
+json = ["dep:jsonc-parser"]
+jsonc = ["dep:jsonc-parser"]
+json5 = ["dep:jsonc-parser"]
+jsonl = ["dep:jsonc-parser"]
+yaml = ["dep:saphyr", "dep:saphyr-parser"]
+toml = ["dep:toml"]
+ron = []
+csv = ["dep:csv"]
+ini = ["dep:rust-ini"]
+env = []
+properties = ["dep:java-properties", "dep:encoding_rs"]
+kdl = ["dep:kdl"]
+frontmatter = []
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }
+jsonc-parser = { version = "0.34", optional = true }
+saphyr = { version = "0.3", optional = true }
+saphyr-parser = { version = "0.3", optional = true }
+toml = { version = "1", optional = true, features = ["preserve_order"] }
+csv = { version = "1", optional = true }
+rust-ini = { version = "0.21", optional = true }
+java-properties = { version = "2", optional = true }
+encoding_rs = { version = "0.8", optional = true }
+kdl = { version = "6", optional = true, default-features = false, features = ["span", "v1"] }
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["preserve_order", "arbitrary_precision"] }
+json5 = "1"
+serde = { version = "1", features = ["derive"] }
+ron = "0.12"

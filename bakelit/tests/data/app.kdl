@@ -1,0 +1,9 @@
+name "kdl"
+port 8080
+tags "a" "b"
+server host="a.example" max-conns=10
+server host="b.example"
+db {
+    name "main"
+    pool 4
+}

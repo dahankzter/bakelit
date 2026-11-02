@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "port": 8080,
+  "ratio": 0.75,
+  "servers": [
+    { "host": "a.example", "max-conns": 10 },
+    { "host": "b.example" }
+  ],
+  "log-level": "info",
+  "limits": { "cpu": 2, "mem": 512 },
+  "shape": { "Circle": { "r": 1.5 } }
+}

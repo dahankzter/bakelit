@@ -1,0 +1,5 @@
+error: String isn't const; use &'static str
+ --> tests/ui/type_unsupported.rs:3:27
+  |
+3 |     struct Server { host: String, port: u16 }
+  |                           ^^^^^^

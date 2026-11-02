@@ -1,0 +1,19 @@
+// A RON file.
+App(
+    name: "ron",
+    level: Warn,
+    shapes: [
+        Circle(r: 1.5),
+        Pair(1, 2),
+        Wrap(5),
+        Dot,
+    ],
+    origin: Some((0, -1)),
+    initial: 'x',
+    big: 340282366920938463463374607431768211455,
+    small: -170141183460469231731687303715884105728,
+    lookup: {
+        "a": 1,
+        "b": 2,
+    },
+)

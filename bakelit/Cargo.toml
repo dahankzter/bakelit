@@ -1,0 +1,37 @@
+[package]
+name = "bakelit"
+description = "Data files (JSON, YAML, TOML, RON, CSV, KDL and more) baked into typed Rust statics at compile time."
+documentation = "https://docs.rs/bakelit"
+readme = "../README.md"
+keywords = ["embed", "include", "static", "compile-time", "macro"]
+categories = ["development-tools::procedural-macro-helpers", "no-std", "parser-implementations"]
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = ["json", "toml", "yaml", "csv"]
+json = ["bakelit-macros/json"]
+jsonc = ["bakelit-macros/jsonc"]
+json5 = ["bakelit-macros/json5"]
+jsonl = ["bakelit-macros/jsonl"]
+yaml = ["bakelit-macros/yaml"]
+toml = ["bakelit-macros/toml"]
+ron = ["bakelit-macros/ron"]
+csv = ["bakelit-macros/csv"]
+ini = ["bakelit-macros/ini"]
+env = ["bakelit-macros/env"]
+properties = ["bakelit-macros/properties"]
+kdl = ["bakelit-macros/kdl"]
+frontmatter = ["bakelit-macros/frontmatter"]
+
+[dependencies]
+bakelit-macros = { version = "=0.1.0", path = "../bakelit-macros", default-features = false }
+
+[dev-dependencies]
+trybuild = "1"
+
+[package.metadata.docs.rs]
+all-features = true

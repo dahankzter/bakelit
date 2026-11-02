@@ -1,0 +1,5 @@
+error: ui-data/norway.yaml:1:10: $.enabled: expected bool, found "yes"; write true or false
+ --> tests/ui/norway.rs:2:23
+  |
+2 |     static F: Flags = "ui-data/norway.yaml";
+  |                       ^^^^^^^^^^^^^^^^^^^^^
